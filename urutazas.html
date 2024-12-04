@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Stubinszky Nóra">
+    <meta name="title" content="A naprendszer">
+    <meta name="description" content="A naprendszer 4 bolygójának ismertetése">
+    <title>A naprendszer bolygói</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Anta&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        label.error {
+            color: red;
+            font-size: small;
+        }
+    </style>
+    <script src="urlap_validalas/jquery-3.7.1.js"></script>
+    <script src="urlap_validalas/jquery-validation-1.19.5/dist/jquery.validate.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    vezeteknev: "required",
+                    keresztnev: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telefon: {
+                        required: true,
+                        tel: true
+                    },
+                    idopont: "required",
+                    hozzajarulas: "required"
+                },
+                messages: {
+                    vezeteknev: "Írd be a vezetékneved!",
+                    keresztnev: "Írd be a keresztneved!",
+                    email: "Valós e-mail címet adj meg!",
+                    telefon: "Valós telefonszámot adj meg!",
+                    idopont: "Add meg utazásod időpontját!",
+                    hozzajarulas: "Csak akkor foglalhatsz utazást, ha tisztában vagy a veszélyeivel!"
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Indulj az űrbe!</h1>
+    <p style="text-align: center;">Töltsd ki az űrlapot, és csatlakozz a következő űrutazáshoz. Az univerzum csak rád
+        vár!</p>
+    <section class="utazas">
+        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="myform" novalidate>
+            <label for="vezeteknev">Vezetéknév:</label><br>
+            <input type="text" name="vezeteknev" size="30" placeholder="Vezetéknév" id="vezeteknev"><br>
+            <label for="keresztnev">Keresztnév:</label><br>
+            <input type="text" name="keresztnev" size="20" placeholder="Keresztnév" id="keresztnev"><br>
+            <label for="email">E-mail cím:</label><br>
+            <input type="email" name="email" placeholder="E-mail" id="email"><br>
+            <label for="telefon">Telefonszám:</label><br>
+            <input type="tel" name="telefon" id="telefon" placeholder="+36"><br>
+            <label for="korabbiut">Hányszor vettél részt űrutazáson korábban?</label><br>
+            <input type="number" name="korabbiut" id="korabbiut" min="0"><br>
+            <label for="desztinacio">Hova szeretnél utazni?</label><br>
+            <input type="radio" name="desztinacio" id="hold" value="hold">Hold <br>
+            <input type="radio" name="desztinacio" id="mars" value="mars">Mars <br>
+            <label for="idopont">Mikor szeretnél utazni?</label><br>
+            <input type="date" name="idopont" id="idopont"><br>
+            <label>Válassz ülőhelyet:</label><br>
+            <table>
+                <tr>
+                    <td class="foglalt"><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                </tr>
+                <tr>
+                    <td class="foglalt"><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                </tr>
+            </table>
+            <input type="checkbox" name="hozzajarulas" id="hozzajarulas">
+            <label for="hozzajarulas">Kijelentem, hogy tisztában vagyok az utazás esetleges kockázataival,
+                veszélyeivel.</label><br>
+            <input type="submit" value="Küldés">
+        </form>
+    </section>
+    <script>
+        const ulohelyek = document.querySelectorAll("table td");
+        for (let i = 0; i < ulohelyek.length; i++) {
+            ulohelyek[i].addEventListener("click", () => {
+                const szin = getComputedStyle(ulohelyek[i]).backgroundColor;
+                if (szin === "rgb(255, 0, 0)") {
+                    alert("Ez a hely már foglalt!");
+                } else if (szin === "rgb(37, 212, 37)") {
+                    ulohelyek[i].style.backgroundColor = "blue";
+                } else if (szin === "rgb(0, 0, 255)") {
+                    ulohelyek[i].style.backgroundColor = "rgb(37, 212, 37)";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

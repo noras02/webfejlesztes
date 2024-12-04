@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Stubinszky Nóra">
+    <meta name="title" content="A naprendszer">
+    <meta name="description" content="A naprendszer 4 bolygójának ismertetése">
+    <title>A naprendszer bolygói</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Anta&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Tudd meg melyik űrhajósra hasonlítasz leginkább!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="merkur.html">Merkúr</a></li>
+            <li><a href="venusz.html">Vénusz</a></li>
+            <li><a href="fold.html">Föld</a></li>
+            <li><a href="mars.html">Mars</a></li>
+            <li><a href="quiz.html" id="current">Quiz</a></li>
+        </ul>
+    </nav>
+    <form action="#">
+        <p>Válassz egy nyelvet, amit szívesen megtanulnál!</p>
+        <ol>
+            <li><input type="radio" name="kerdes1" id="nyelv_a">
+                <label class="quiz" for="nyelv_a">orosz</label>
+            </li>
+            <li><input type="radio" name="kerdes1" id="nyelv_b">
+                <label class="quiz" for="nyelv_b">angol</label>
+            </li>
+            <li><input type="radio" name="kerdes1" id="nyelv_c">
+                <label class="quiz" for="nyelv_c">eszperantó</label>
+            </li>
+        </ol>
+        <p>Melyik "fogást" ennéd meg legszívesebben?</p>
+        <div class="opciok">
+            <label><img src="JS/yuri_space_food.jpg" alt="gagarin űrfogása">
+                <input type="radio" name="fogas" value="gagarin_fogas" id="gagarin_fogas"></label>
+            <label><img src="JS/armstrong_space_food.jpg" alt="armstrong  űrfogása">
+                <input type="radio" name="fogas" value="armstrong_fogas" id="armstrong_fogas"></label>
+            <label><img src="JS/farkas_space_food.jpg" alt="farkas  űrfogása">
+                <input type="radio" name="fogas" value="farkas_fogas" id="farkas_fogas"></label>
+        </div>
+        <p>Mi a kedvenc zenei műfajod?</p>
+        <ol>
+            <li><input type="radio" name="kerdes3" id="mufaj_a">
+                <label class="quiz" for="mufaj_a">Klasszikus</label>
+            </li>
+            <li><input type="radio" name="kerdes3" id="mufaj_b">
+                <label class="quiz" for="mufaj_b">Musical</label>
+            </li>
+            <li><input type="radio" name="kerdes3" id="mufaj_c">
+                <label class="quiz" for="mufaj_c">Népzene</label>
+            </li>
+        </ol>
+        <p>Válassz egy sportot, amit szívesen csinálnál!</p>
+        <div class="opciok">
+            <label><img src="JS/ice_hockey.jpg" alt="hockey">
+                <input type="radio" name="gagarin_sport" id="gagarin_sport"></label>
+            <label><img src="JS/golf.jpg" alt="golfozó">
+                <input type="radio" name="armstrong_sport" id="armstrong_sport"></label>
+            <label><img src="JS/soccer.jpg" alt="futball">
+                <input type="radio" name="farkas_sport" id="farkas_sport"></label>
+        </div>
+        <p>Melyik idézet tetszik a leginkább?</p>
+        <ol>
+            <li><input type="radio" name="kerdes5" id="idezet_a">
+                <label class="quiz" for="idezet_a">"Távolról nézve a Földet rájössz, hogy túl kicsi a konfliktushoz, és
+                    éppen elég nagy az együttműködéshez."</label>
+            </li>
+            <li><input type="radio" name="kerdes5" id="idezet_b">
+                <label class="quiz" for="idezet_b">"Kis lépés egy embernek, de hatalmas ugrás az emberiségnek."</label>
+            </li>
+            <li><input type="radio" name="kerdes5" id="idezet_c">
+                <label class="quiz" for="idezet_c">"Az űrhajózásban soha nem érzi úgy az ember, hogy mindent tud, csakis
+                    azt a hitét tudja magában erősíteni, hogy minden tőle telhetőt megtett a siker érdekében."</label>
+            </li>
+        </ol>
+        <input type="button" value="Küldés" id="eredmeny">
+        <div id="kivagy"></div>
+    </form>
+    <script src="JS/naprendszer.js"></script>
+</body>
+
+</html>

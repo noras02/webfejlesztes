@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-family: 'Audiowide';
+    text-align: center;
+    margin: 0;
+    line-height: 100px
+}
+
+h3 {
+    color: white;
+    font-family: 'Audiowide';
+    text-align: left;
+    margin: 0;
+    line-height: 50px;
+    font-size: 25px;
+}
+
+p,
+li {
+    color: white;
+    font-family: 'Anta';
+    font-size: 20px;
+    font-weight: 100;
+}
+
+label {
+    color: black;
+    font-family: 'Anta';
+    font-size: 20px;
+    font-weight: 100;
+}
+
+label.quiz {
+    color: white;
+    font-family: 'Anta';
+    font-size: 20px;
+    font-weight: 100;
+}
+
+ol {
+    list-style-type: upper-alpha;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav li a#current {
+    background-color: rgb(31, 28, 28);
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+    font-family: 'Audiowide';
+    font-weight: bold;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    border: 3px solid #595959;
+    background-color: rgb(7, 7, 7);
+    padding: 8px;
+    text-align: center;
+    line-height: 35px;
+    transform: none;
+    overflow: hidden;
+}
+
+nav a:hover {
+    background-color: rgb(31, 28, 28);
+}
+
+.bolygok {
+    border: solid 5px #7f4f24;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.egitest {
+    border: solid 5px #7f4f24;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.bolygotipusok {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img.bolygokepek {
+    max-width: 20%;
+    height: auto;
+}
+
+img.egitestkepek {
+    max-width: 50%;
+    height: auto;
+}
+
+img.torpe {
+    max-width: 100%;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p.bolygofelirat {
+    text-align: center;
+    line-height: 2px;
+}
+
+article {
+    color: white;
+    font-family: 'Audiowide'
+}
+
+.felhivas {
+    margin: 0 auto;
+    padding: 5px;
+    width: 50%;
+    border: 3px solid #595959;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.felhivas a {
+    color: white;
+    font-family: 'Audiowide';
+    text-decoration: none;
+}
+
+.merkur2 {
+    float: right;
+    max-width: 60%;
+}
+
+.merkur3 {
+    float: left;
+    margin-left: 100px;
+    max-width: 50%
+}
+
+.venusz2 {
+    float: right;
+    max-width: 60%;
+}
+
+img.bolygoadat {
+    max-width: 70%;
+}
+
+.adatok {
+    border: solid 5px #7f4f24;
+    border-radius: 12px;
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.adat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px
+}
+
+.nullamargin {
+    margin: 0;
+    line-height: 50px;
+}
+
+
+table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+td {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgb(37, 212, 37);
+    width: 50px;
+    height: 50px;
+}
+
+td.foglalt {
+    background-color: rgb(255, 0, 0);
+}
+
+.utazas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #7f4f24;
+    border-radius: 20px;
+    background-color: #ffe6a7;
+    text-align: center;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 30px 0;
+}
+
+.opciok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opciok img {
+    width: 200px;
+    height: auto;
+    border: 3px solid black;
+}
+
+.kivagy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.content img {
+    width: 40%;
+    height: auto;
+    margin: 10px
+}
+
+/* galeria */
+.slider {
+    width: 90%;
+    min-width: 500px;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 0px 5px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: white;
+}
+
+.slick-slide {
+    transition: all ease-in-out 0.3s;
+    opacity: 0.1;
+}
+
+.slick-active {
+    opacity: 0.2;
+}
+
+.slick-current {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+}
+
+/* Reszponzivitás */
+@media all and (min-width: 600px) {
+
+    /*tablet*/
+    nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav li {
+        width: 100%
+    }
+
+    nav a {
+        transform: skew(-20deg);
+    }
+
+    .bolygok,
+    .egitest {
+        width: 40%
+    }
+
+    .bolygotipusok {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .egitest {
+        max-width: 40%
+    }
+
+    img.egitestkepek {
+        max-width: 40%;
+    }
+
+    .merkur2 {
+        max-width: auto;
+        height: 40%
+    }
+
+    .merkur3 {
+        max-width: 50%;
+        margin: 0
+    }
+
+    .venusz2 {
+        max-width: auto;
+        height: 40%
+    }
+
+    .adatok {
+        justify-content: end;
+        max-width: 50%;
+        float: right;
+    }
+
+    img.bolygoadat {
+        max-width: 90%;
+    }
+
+    .adat {
+        align-items: start;
+    }
+}
+
+@media all and (min-width: 768px) {
+
+    /*számítógép*/
+    .merkur2 {
+        max-width: auto;
+        height: 10%
+    }
+
+    .merkur3 {
+        max-width: 30%;
+        margin: 0
+    }
+
+    .venusz2 {
+        max-width: 30%
+    }
+
+    .adatok {
+        justify-content: end;
+        max-width: 25%;
+        float: right;
+    }
+
+    img.bolygoadat {
+        max-width: 90%;
+    }
+
+    .adat {
+        align-items: start;
+    }
+
+    .utazas {
+        max-width: 50%;
+    }
+}
