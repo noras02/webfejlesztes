@@ -1,5 +1,5 @@
 -Oldal készítője: Stubinszky Nóra
--URL cím:
+-URL cím:https://github.com/noras02/webfejlesztes
 -Leírás: Az oldalam a naprendszerünk 4 kőzetbolygóját(Merkúr, Vénusz, Föld, Mars) mutatja be röviden, lényegretörően. A Quiz segítségével a felhasználható kiderítheti, hogy melyik ismert űrhajóssal egyeznek meg egyes személyiségjegyei. Az űrlap kitöltésével pedig egy fiktív űrutazásra jelentkezhet.
 -Javascript: Több oldalon is található JavaScript kód. A quizem készítése során írt kódot szeretném, ha figyelembe vennék értékelésnél.
 -Javascript kódom célja: Összesíti a quiz során elért pontokat, ez alapján jelenít meg egy űrhajóst a felhasználó számára
